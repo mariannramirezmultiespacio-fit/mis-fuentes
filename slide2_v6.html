@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  @font-face {
+    font-family: 'Aristotelica';
+    src: url('https://raw.githubusercontent.com/mariannramirezmultiespacio-fit/mis-fuentes/main/Aristotelica-Display-Bold-trial.ttf') format('truetype');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'BodyGrotesque';
+    src: url('https://raw.githubusercontent.com/mariannramirezmultiespacio-fit/mis-fuentes/main/Zetafonts%20-%20Body%20Grotesque%20Fit%20Bold%20Italic.otf') format('opentype');
+    font-weight: 400;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .slide-wrap { width: 100%; max-width: 380px; }
+
+  .slide {
+    width: 100%;
+    aspect-ratio: 1080 / 1350;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  /* fondo real del repo */
+  .bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* overlay amarillo para mantener el tono de marca */
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: #f7db69;
+    opacity: 0.86;
+  }
+
+  .content {
+    position: absolute;
+    top: 10%;
+    bottom: 20%;
+    left: 13%;
+    right: 13%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: 2;
+  }
+
+  /* bloque superior */
+  .bloque { display: flex; flex-direction: column; }
+
+  .n1 {
+    font-family: 'Aristotelica', serif;
+    font-weight: 700;
+    color: #2a500f;
+    line-height: 1.05;
+    /* +5% respecto a v5: 6.2vw → 6.5vw */
+    font-size: clamp(25px, 6.5vw, 44px);
+    display: block;
+    margin-top: 3%;
+  }
+
+  .n2 {
+    font-family: 'BodyGrotesque', sans-serif;
+    color: #2a500f;
+    font-size: clamp(13px, 3.3vw, 20px);
+    line-height: 1.5;
+    display: block;
+  }
+
+  .n3 {
+    font-family: 'BodyGrotesque', sans-serif;
+    color: #2a500f;
+    font-size: clamp(11px, 2.8vw, 17px);
+    line-height: 1.6;
+    display: block;
+    opacity: 0.75;
+  }
+
+  /* firma blanca exacta — igual que slide 1 con mix-blend-mode screen */
+  .firma-wrap {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 44%;
+    max-width: 170px;
+  }
+
+  .firma-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    mix-blend-mode: screen;
+    filter: brightness(2);
+  }
+</style>
+</head>
+<body>
+<div class="slide-wrap">
+  <div class="slide">
+
+    <img class="bg"
+      src="https://raw.githubusercontent.com/mariannramirezmultiespacio-fit/mis-fuentes/main/fondo%20axe%20con%20lineas%202_Mesa%20de%20trabajo%201.jpg"
+      alt="fondo"/>
+    <div class="overlay"></div>
+
+    <div class="content">
+
+      <div class="bloque">
+        <span class="n2">Llegaste y todas parec&#237;an</span>
+        <span class="n1">SABERLO TODO</span>
+      </div>
+
+      <div class="bloque">
+        <span class="n3">Los pasos, las coreograf&#237;as</span>
+        <span class="n3">Hasta c&#243;mo moverse</span>
+      </div>
+
+      <div class="bloque">
+        <span class="n2">Y vos... sin saber</span>
+        <span class="n1">D&#211;NDE PONER<br>LOS PIES</span>
+      </div>
+
+    </div>
+
+    <div class="firma-wrap">
+      <img src="https://raw.githubusercontent.com/mariannramirezmultiespacio-fit/mis-fuentes/main/logo%20blanco.png" alt="Mariann Ramirez"/>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
